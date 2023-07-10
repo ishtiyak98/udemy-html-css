@@ -27,11 +27,12 @@
     font-size: 18px;
     color: white;
     background-color: #333;
-    padding: 13px 20px;
+    padding: 13px 26px;
     border: none;
 }
 
 .btn:hover {
+    cursor: pointer;
     color: #333;
     background-color: #f7c08a;
 }
