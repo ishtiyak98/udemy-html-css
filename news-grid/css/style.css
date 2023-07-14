@@ -94,6 +94,21 @@ h6 {
   background-color: var(--secondary-color);
 }
 
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.card {
+  padding: 1rem;
+  background-color: #fff;
+}
+
 /*!---------- navigation ----------*/
 #main-nav {
   background: #fff;
@@ -176,6 +191,22 @@ h6 {
   z-index: 1;
 }
 
-#showcase .showcase-content p{
+#showcase .showcase-content p {
   margin-bottom: 1.2rem;
+}
+
+/*!---------- Home Articles ----------*/
+#home-articles .articles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+#home-articles .articles-container > *:first-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  /* grid-column: 1 / span 2; */
+  grid-column-start: 1;
+  grid-column-end: 3;
 }

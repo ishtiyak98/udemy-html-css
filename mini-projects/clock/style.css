@@ -1,0 +1,50 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock {
+  width: 300px;
+  height: 300px;
+  /* background-color: ; */
+  border-radius: 50%;
+  border: 2px solid gray;
+  position: relative;
+}
+
+.sec {
+  width: 140px;
+  height: 2px;
+  background-color: red;
+  position: absolute;
+  top: 151px;
+  left: 10px;
+  transform: translateY(-50%);
+  transform-origin: bottom right;
+  transform: rotate(0deg);
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.min {
+  width: 120px;
+  margin: 30px;
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+  top: 121px;
+  transform: translateY(-50%);
+  transform-origin: bottom right;
+  transform: rotate(90deg);
+  animation: spin 72s linear infinite;
+}

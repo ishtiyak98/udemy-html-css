@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-section {
+  margin-bottom: 80px;
+}
+
+.edit-section h2 {
+  font-size: 32px;
+  color: brown;
+  background-color: transparent;
+  padding: 10px 20px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  color: white;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn.btn-change {
+  background-color: green;
+}
+
+.btn.btn-reset {
+  background-color: red;
+}
+
+/*!------ loader design ------*/
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.loader-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-animation {
+  width: 30%;
+  height: 5px;
+  border-radius: 5px;
+  background-color: white;
+  position: relative;
+}
+
+.loader-animation .progress {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: red;
+  border-radius: 5px;
+  animation-name: slide;
+  animation-duration: 4000;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
