@@ -4,7 +4,9 @@ const editText = document.getElementById("edit-text");
 const loaderContainer = document.getElementById("loader");
 const progress = document.getElementById("progress");
 
-const waitTime = 1000;
+const waitTime = 2000;
+
+console.log(progress);
 
 function waitFunction(waitTime) {
   return new Promise((resolve) => {
@@ -22,7 +24,8 @@ function changeFunction() {
 
 changeBtn.addEventListener("click", async (e) => {
   loaderContainer.classList.add("loader-active");
-  //progress.style.animationDuration = waitTime;
+  console.log(waitTime.toString());
+  progress.style.animationDuration = `${(waitTime / 1000)}s`;
 
   await waitFunction(waitTime);
   await changeFunction();
